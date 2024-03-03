@@ -49,7 +49,7 @@ foreach ($xml->Messages->Message as $message) {
         );
 
         $fields = '<?xml version="1.0" encoding="UTF-8"?><request><Index>' . $message->Index . '</Index></request>';
-        api_call('http://192.168.8.1/api/sms/delete-sms', $headers, 'POST', $fields);
+        request('http://192.168.8.1/api/sms/delete-sms', $headers, 'POST', $fields);
     }
 }
 ?>
